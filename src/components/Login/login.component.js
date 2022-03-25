@@ -3,7 +3,7 @@ import login from './assets/login/login.png';
 import bg from './assets/background/background.png';
 import  './login.style.scss';
 
-/** @namespace  Positium/Component/Login/Component/Login */
+/** @namespace  Sicca/Component/Login/Component/Login */
 export class Login extends PureComponent {
 
     static defaultProps = {};
