@@ -1,0 +1,57 @@
+
+.login{
+    position: absolute;
+    bottom: 0;
+    background-size: cover ;
+    opacity: 0.8;
+}
+
+.form-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 94vh;
+    width: 99vw;
+    margin-top: 5vh;
+}
+.form-container #logo {
+    width: 17vw;
+    opacity: 0.8;
+    margin-bottom: 2vh;
+}
+.form-container input {
+    width: 14vw;
+    margin-top: 0.5vh;
+}
+.button input{
+    background-color: rgb(118, 124, 129);
+    color: aliceblue;
+    border: 1px solid rgb(47, 126, 136);
+    margin-top: 1vh;
+}
+.button input:hover{
+    background-color: rgb(77, 80, 83);
+    color: rgb(196, 200, 204);
+    border: 1px solid rgb(47, 126, 136);
+    box-shadow: 0.2vw 0.5vw 0.7vw 0vw rgb(153, 151, 151);
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+
+.hidden {
+    display: none;
+    animation: hideAnimation 0s ease-in 15s;
+    animation-fill-mode: forwards;
+    //transition-delay: 2s;
+}
+   
+.show {
+    display: inline-block;
+   // transition: opacity 2s linear;
+
+}
+.error{
+    margin-top: 2vh;
+    font-size: 0.7em;
+    color: red;
+}
