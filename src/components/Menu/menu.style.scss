@@ -1,0 +1,297 @@
+nav {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    width: 100vw;
+    font-size: 0.6vw;
+    animation: slide-in 2s ease-out;
+    z-index: 1;
+
+    ul { //Wrap general
+    position: relative;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+    height: 4vh;
+         li:not(:last-child) {
+        margin-right: 0.1vw;
+        }
+   
+        li{  // Boton MENU ppal
+            display: flex;
+            border: 2px solid transparent;
+            border-radius: 0 0 15px 15px;
+            padding: 15px 0px 30px 25px;
+            transition: background 0.2s;
+            color: #fafafa;
+            font-size: 1vw;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            transition: color 0.2s;
+            background: #18638f;
+            text-align: justify;
+            width: 7vw;
+            &:hover { 
+                background: #5ca4ce;
+                ul {
+                    visibility: visible;
+                    border-radius: 0 0 15px 15px;
+                    li ul{ 
+                        visibility: hidden;
+                    }
+                }
+            }
+                ul { 
+                    visibility: hidden;
+                    position: absolute;
+                    margin: 7px -68px;
+                   
+                    
+                        li { // Primera linea. CONFIGURACION PROPIETARIOS....
+                            color: #ffffff;
+                            margin-top: -5vh;
+                            display: flex;
+                            border-radius: 0;
+                            height: 10vh;
+                            text-align: left;
+                            font-size: 0.6vw;
+                            padding: 25px 12px 20px 12px;
+                            border-radius: 0 0 15px 15px;
+                            background: #18638f;
+                            &:hover { 
+                                border-radius: 0;
+                                background: #5ca4ce;
+                                
+                                    ul {
+                                    visibility: visible;
+                                    
+                                        li ul{ 
+                                            visibility: hidden;
+                                        }
+                                    }
+                            }
+                            ul { 
+                                visibility: hidden;
+                                position: absolute;
+                                display: block;
+                                margin: 71px -14px;
+                                padding: 0;
+                                    li { 
+                                        color: #ffffff;
+                                        display: block;
+                                        height: 10vh;
+                                        border-radius: 0;
+                                        text-align: left;
+                                        padding: 15px;
+                                        background: #18638f;
+                                        // &:hover { 
+                                        //     background: #5ca4ce;
+                                        //         ul {
+                                        //         visibility: visible;
+                                        //             li ul{ 
+                                        //                 visibility: hidden;
+                                        //             }
+                                        //         }
+                                        // }
+                                    }
+                            }
+                        }
+                }
+        }
+            
+    img{
+        position: fixed;
+        width: 6vh;
+        right: 1vw;
+        top: 0.5vw;
+        margin-left: 0;
+        z-index: 1;
+    }  
+    }   
+}    
+
+          
+// nav ul li ul { 
+//     visibility: visible;
+//     position: absolute;
+//     display: block;
+//     margin: 7px -14px;
+//     padding: 0;
+//         li { 
+//             color: #ffffff;
+//             left: -5vw;
+//             display: block;
+//             border-radius: 0;
+//             text-align: left;
+//             padding: 20px 12px 20px 12px;
+//             background: #18638f;
+//             &:hover { 
+//                 background: #5ca4ce;
+//                     ul {
+//                     visibility: visible;
+//                         li ul{ 
+//                             visibility: hidden;
+//                         }
+//                     }
+//             }
+//         }
+// }
+// nav ul li ul li ul { 
+//     visibility: hidden;
+//     position: absolute;
+//     display: block;
+//     margin: -20px 100px;
+//     padding: 0;
+                        
+//     li { 
+//         color: #ffffff;
+//         left: -5vw;
+//         display: block;
+//         border-radius: 0;
+//         padding: 10px 12px 10px 12px;
+//         background: #556277;
+//         &:hover { 
+//             background: #5ca4ce;
+//                 ul {
+//                 visibility: visible;
+//                     li ul{ 
+//                         visibility: hidden;
+//                     }
+//                 }
+//         }
+//     }
+// }
+#last {
+    display: block;
+    border-radius: 0 0 15px 15px;               
+    width: 7vw;
+    overflow:hidden;
+}  
+@keyframes slide-in {
+    0% {
+      top: -50px;
+    }
+    40% {
+      top: 20px;
+    }
+    70% {
+      top: 10px;
+    }
+    100% {
+      top: 15px;
+    }
+  }
+
+ /* RESPONSIVE DESIGN FOR MOBILE */
+
+/* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 915px)  
+and (orientation: portrait)   {
+
+    nav {
+        position: relative;
+        display:flex;
+        font-size: 2vw;
+        text-align: justify;
+        // ul {
+        //     display: block;
+        //     padding: 0;
+        //     li:not(:last-child) {
+        //         margin-bottom: 0.7vw;
+        //         }
+        //     ul{
+        //         visibility: visible;
+        //         border-radius: 0 5px 5px 0;
+        //         padding: 5px 7px 5px 12px;
+        //         width: 10vw;
+        //         height: 9vh;
+        //         writing-mode: vertical-rl; 
+        //         &:hover { 
+        //             border-radius: 0;
+        //             background: #5ca4ce;
+        //             nav ul ul li {
+        //                 visibility: visible;
+                        
+        //             }
+        //         }
+        //     }   
+        // } 
+    }  
+    nav ul label{
+        visibility: visible;
+        color: #18638f;
+        &:hover { 
+            border-radius: 0;
+            background: #5ca4ce;
+            nav ul li  {
+                visibility: visible;
+            }
+            nav ul li ul {
+                visibility: hidden;
+            }
+        }  
+    }
+    nav ul li {
+        visibility: hidden;
+        display: block;
+    }       
+    
+nav ul img{
+            position: fixed;
+            width: 3vh;
+            right:1vw;
+            margin-left: 0;
+            z-index: 1;
+        }
+} 
+    //         li{
+    //         display: block;
+    //         visibility: visible;
+    //         color: #556277;
+    //         margin-top: 0;
+
+    //     }     
+    //     }
+        
+ 
+
+    // }
+    // nav ul li  { 
+    //     visibility: hidden;
+    //     display: inline-flex;
+    // }
+    // #last {
+    //     display: block;
+    //     border-radius: 0 5px 5px 0;               
+    //     width: 10vw;
+    //     overflow:hidden;
+    // }  
+// } 
+/****** LANDSCAPE *************/
+@media  only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 915px)  
+and (orientation: landscape)   {
+
+}
+/* LOW RESOLUTION */
+
+/****** PORTRAIT *************/
+@media  only screen 
+and (min-device-width: 200px) 
+and (max-device-width: 359px) 
+and (orientation: portrait)   {
+ 
+} 
+/****** LANDSCAPE *************/
+@media  only screen 
+and (min-device-width: 200px) 
+and (max-device-width: 359px) 
+and (orientation: landscape)   {
+  
+}  

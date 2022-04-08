@@ -2,12 +2,13 @@ export const IS_AUTHENTICATED = 'IS_AUTHENTICATED';
 export const SET_ERROR = 'SET_ERROR';
 
 /** @namespace Sicca/Store/Sicca/Sicca/Action/isSubmitted */
-export const isAuthenticated = (login, id, name, ip) => ({
+export const isAuthenticated = (login, id, name, role, ip) => ({
     type: IS_AUTHENTICATED,
     payload: {
         login,
         id,
         name,
+        role,
         ip
 
     }

@@ -11,7 +11,7 @@ export const mapStateToProps = (state) => ({
 });
 /** @namespace  Sicca/Component/Session/Container/mapDispatchToProps */
 export const mapDispatchToProps = (dispatch) => ({
-    isAuthenticated: (isSubmitted, user_id, name, ip) => dispatch(isAuthenticated(isSubmitted, user_id, name, ip))
+    isAuthenticated: (isSubmitted, user_id, name, role, ip) => dispatch(isAuthenticated(isSubmitted, user_id, name, role, ip))
 });
 /** @namespace  Sicca/Component/Session/Container/SessionContainer */
 export class SessionContainer extends PureComponent {
@@ -81,8 +81,7 @@ export class SessionContainer extends PureComponent {
             let exp = JWT.exp * 1000;
             let id = parseInt(JWT.payload.id);
             let iat = Date.now();
-            if(iat > exp) { //if expired  delete cookie and redirect
-                document.cookie = "sicca=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            if(iat > exp) { //if expired  delete cookie and""  document.cookie = "sicca=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
                 return (
                 <LoginContainer getUser = { this.getUser }/>,
                 this.props.isAuthenticated(false)
@@ -112,7 +111,7 @@ export class SessionContainer extends PureComponent {
                         role: data.role
                     });
                     return (
-                        this.props.isAuthenticated(true, id, data.name, myIP)
+                        this.props.isAuthenticated(true, id, data.name, this.state.role, myIP)
                     )
                 }
                 if (data === 'Error'){
@@ -130,14 +129,17 @@ export class SessionContainer extends PureComponent {
 
             if(isSubmitted === true) {
 
-                if(this.state.role === 'admin'){
+                if(this.state.role === '1'){
                     return <Navigate to="/admin" />;
                 }
-                if(this.state.role === 'user'){
-                    return <Navigate to="/user" />;
+                if(this.state.role === '2'){
+                    return <Navigate to="/admin"/>;
+                }
+                if(this.state.role === '3'){
+                    return <Navigate to="/home" />;
                 }
                 if(this.state.role === null){
-                    return "";
+                    return <Navigate to="/admin"/>;
                 }
                
             }

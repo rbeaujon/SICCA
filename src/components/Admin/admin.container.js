@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
+import LoadAppContainer from  '../LoadApp';
+import Menu from '../Menu';
 import { Navigate } from "react-router-dom";
 import { isAuthenticated } from '../../store/sicca/sicca.actions';
-import Menu from '../Menu';
 import bg from '../../assets/bg/simple.jpg';
 import '../../styles/main.scss'
+import './admin.style.scss';
 
 /** @namespace Sicca/App/mapStateToProps */
 export const mapStateToProps = (state) => ({
@@ -15,7 +17,7 @@ export const mapDispatchToProps = (dispatch) => ({
   isAuthenticated: (isSubmitted) => dispatch(isAuthenticated(isSubmitted))
 });
 
-function Home(props) {
+function Admin(props) {
 
   const { isSubmitted } = props;
   if(isSubmitted === false) {
@@ -23,13 +25,14 @@ function Home(props) {
 }
   return (
     
-    <div>         
-      <Menu />
+    <div>     
+       <Menu />
   
       <div className="bar" />
       <div className="bg"> 
         <img src={bg} alt="bg"/>
-      </div> 
+      </div>  
+
       <div className = "menu-lateral">
         <label htmlFor="login">Hi,
         <p> {props.name}</p>  
@@ -40,10 +43,8 @@ function Home(props) {
              )}} > 
         </button></label>
       </div>
-      <div>
-        EN USER
-      </div>
-     
+        
+        <LoadAppContainer />
       
        
       <div className="footer col-s-12 col-12 col-b-12"> 
@@ -54,5 +55,5 @@ function Home(props) {
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Admin);
 

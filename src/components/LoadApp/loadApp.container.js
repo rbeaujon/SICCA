@@ -27,25 +27,7 @@ export class LoadAppContainer extends PureComponent {
 
     async getData() {
        
-        // let requestOptions = {    
-        //     method: 'GET',
-        //     mode: 'cors'
-
-        // };
-        // let link = "http://api.weatherapi.com/v1/current.json?key=1c9788cb28e24e538cb144826221703&q=Estonia&aqi=yes";
-
-      
-        //     await fetch(link, requestOptions ) 
-        //     .then(response => response.json())
-        //     .then(data => {
-        //       console.log('Success, the answer from server API is:', data);
-        //       this.setState({
-        //         weather: data
-        //     });
-        //     })
-        //     .catch((error) => {
-        //       console.error('The data has some errors:', error);
-        //     });
+    
     
         }     
 
