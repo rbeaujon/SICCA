@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/sicca/static/css/main.ac6d9f94.css",
+    "main.js": "/sicca/static/js/main.d387c246.js",
+    "static/media/login.png": "/sicca/static/media/login.fa6447534cc40d890b02.png",
+    "static/media/logo.jpg": "/sicca/static/media/logo.fa6447534cc40d890b02.jpg",
+    "static/media/simple.jpg": "/sicca/static/media/simple.7d403c13ff0205c1a467.jpg",
+    "static/media/background.png": "/sicca/static/media/background.6235d941812df26bcfce.png",
+    "index.html": "/sicca/index.html",
+    "main.ac6d9f94.css.map": "/sicca/static/css/main.ac6d9f94.css.map",
+    "main.d387c246.js.map": "/sicca/static/js/main.d387c246.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac6d9f94.css",
+    "static/js/main.d387c246.js"
+  ]
+}

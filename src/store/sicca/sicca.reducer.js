@@ -4,6 +4,7 @@ export const getinitialState = () => ({
     isSubmitted: false,
     user_id: null,
     name: null,
+    role: null,
     ip: null,
     error: null
 });
@@ -23,6 +24,7 @@ export const SiccaReducer = (
             isSubmitted: payload.login,
             user_id:  payload.id,
             name:  payload.name,
+            role: payload.role,
             ip: payload.ip
         } 
     case SET_ERROR:

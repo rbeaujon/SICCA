@@ -88,10 +88,10 @@ export class LoginContainer extends PureComponent {
 }
 
     render(){
-        const { isSubmitted } = this.props;
+        const { isSubmitted, role } = this.props;
         
 
-            if(isSubmitted === true) {
+            if(isSubmitted === true && role === '1') {
                 this.props.setError('submitted')
                 return <Navigate to="/admin" />;
             }

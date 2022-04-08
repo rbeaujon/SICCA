@@ -3,8 +3,8 @@ import { Navigate } from "react-router-dom";
 import LoadAppContainer from  './components/LoadApp';
 import SessionContainer from  './components/Session';
 import { isAuthenticated } from './store/sicca/sicca.actions';
+import Menu from './components/Menu';
 import bg from './assets/bg/simple.jpg';
-import login from './assets/icon/logo.jpg';
 import './styles/main.scss'
 
 /** @namespace Sicca/App/mapStateToProps */
@@ -19,6 +19,9 @@ export const mapDispatchToProps = (dispatch) => ({
 
 function App(props) {
 
+
+
+
   const { isSubmitted } = props;
   if(isSubmitted === false) {
     return <Navigate to="/" />;
@@ -26,11 +29,8 @@ function App(props) {
 
   return (
     
-    <div>         
-      <div className = "menu">
-        <img src={login} alt="login" id="logo"  />
-        <label for="menu"> </label>
-      </div>
+    <div> 
+        {/* <Menu />      
       <div className="bar" />
       <div className="bg"> 
         <img src={bg} alt="bg"/>
@@ -52,7 +52,7 @@ function App(props) {
        
       <div className="footer col-s-12 col-12 col-b-12"> 
           <p>SICCA Sistema para el Control de Condominios </p> 
-      </div> 
+      </div>  */}
     </div> 
   
   );
